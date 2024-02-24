@@ -5,9 +5,10 @@ pipeline
 			stage ("BUild") {
 					steps {
 						echo "this is build"
-						sh "git fetch git@github.com:BharathSukka/seven.git"
+						sh "git pull git@github.com:BharathSukka/seven.git"
 						sh "ls"
 						sh "git log --oneline"
+						sh "python3 look.py"
 						}
 					}
 			stage ("Deploy") {
