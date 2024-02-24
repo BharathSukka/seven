@@ -5,6 +5,8 @@ pipeline
 			stage ("BUild") {
 					steps {
 						echo "this is build"
+						sh "git pull git@github.com:BharathSukka/seven.git"
+						sh "ls"
 						}
 					}
 			stage ("Deploy") {
